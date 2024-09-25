@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1f3a1f;
+}
+.conteiner{
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-login{
+    width: 400px;
+    position: absolute;
+}
+.box-login form{
+    width: 100%;
+    padding: 0 50px;
+}
+h2{
+    font-size: 2rem;
+    color: rgb(0, 255, 0);
+    text-align: center;
+}
+.caixa-entrada{
+    position: relative;
+    margin: 25px 0;
+}
+.caixa-entrada input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c663a;
+    outline: none;
+    border-radius: 40px;
+    transition: .5s ease;
+}
+.caixa-entrada label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 1.2rem;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: .5s ease;
+}
+.esqueceu{
+    margin: -10px 0 10px;
+    text-align: center;
+}
+.esqueceu a{
+    font-size: .8rem;
+    color: #fff;
+    text-decoration: none;
+}
+.esqueceu a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(0, 255, 0);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: crosshair;
+    font-size: 1rem;
+    color: #1f3a1f;
+    font-weight: 700;
+}
+.cadastro{
+    margin: 20px 0 10px;
+    text-align: center;
+}
+.cadastro a{
+    font-size: .8rem;
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+    font-weight: 400;
+}
+.cadastro a:hover{
+    text-decoration: none;
+}
+.caixa-entrada input:focus ~ label , .caixa-entrada input:valid ~ label{
+    top: 0px;
+    font-size: .7rem;
+    background: #1f3a1f;
+    color: rgb(0, 255, 0);
+    padding: 0 10px;
+}
+.caixa-entrada input:focus, .caixa-entrada input:valid{
+    border-color: rgb(0, 255, 0);
+}
+.caixa-entrada input{
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0 20px;
+}
+.conteiner span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    border-radius: 5px;
+    background: #2c663a;
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+    transform-origin: 120px;
+    animation: brilinho 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+@keyframes brilinho{
+    0%{background-color: rgb(0, 255, 0);}
+    25%{background: #2c663a;}
+}
